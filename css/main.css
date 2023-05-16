@@ -1,13 +1,37 @@
 body {
 	background-color: var(--background-dark);
-	height: 200vh;
+	height: 300vh;
 	overflow-x: hidden;
 }
 
 /* Splash screen */
 
+#particles {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20vh;
+	margin: auto;
+}
+
+.nav-buttons {
+	text-align: center;
+	position: absolute;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	left: 0;
+	right: 0;
+	top: 20px;
+	max-width: 750px;
+	margin: auto;
+}
+
+.nav-buttons a {
+	color: var(--text-main);
+	margin: auto;
+}
+
 .splash {
-	/* display: none; */
 	position: relative;
 	background: linear-gradient(180deg, var(--background-light) 0%, var(--background-light) 84%, var(--background-dark) 100%);
 	height: max(120vh, 1000px)
@@ -51,15 +75,14 @@ body {
 }
 
 .main-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
 	grid-column: 1/-1;
 	margin-top: 40vh;
 	opacity: 1;
 	width: 100%;
-}
-
-#particles {
-	position: absolute;
-	z-index: 2;
 }
 
 /* Team modals */

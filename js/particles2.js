@@ -1,7 +1,7 @@
 const canvas = document.getElementById("particles")
 const context = canvas.getContext("2d")
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+// canvas.width = window.innerWidth
+// canvas.height = window.innerHeight
 
 function boxMuller () {
 	let u = Math.random()
@@ -49,23 +49,37 @@ class ParticleTrail {
 
 		this.draw = function () {
 			context.strokeStyle = this.color
-			context.beginPath()
 			context.lineWidth = this.size
+			context.beginPath()
+			
 			for (let i=0; i<length; i++) {
-				context.lineWidth = this.size - i/this.length
 				let y = this.particle_trail.slice().reverse()[i]
 				context.lineTo((i*this.dt)+canvas.width/2, y+canvas.height/2)
-				context.stroke()
 			}
+			context.stroke()
 
 			context.beginPath()
-			context.lineWidth = this.size
 			for (let i=0; i<length; i++) {
-				context.lineWidth = this.size - i/this.length
 				let y = this.particle_trail.slice().reverse()[i]
 				context.lineTo(-(i*this.dt)+canvas.width/2, y+canvas.height/2)
-				context.stroke()
 			}
+			context.stroke()
+
+			// for (let i=0; i<length; i++) {
+			// 	context.lineWidth = this.size - i/this.length
+			// 	let y = this.particle_trail.slice().reverse()[i]
+			// 	context.lineTo((i*this.dt)+canvas.width/2, y+canvas.height/2)
+			// 	context.stroke()
+			// }
+
+			// context.beginPath()
+			// context.lineWidth = this.size
+			// for (let i=0; i<length; i++) {
+			// 	context.lineWidth = this.size - i/this.length
+			// 	let y = this.particle_trail.slice().reverse()[i]
+			// 	context.lineTo(-(i*this.dt)+canvas.width/2, y+canvas.height/2)
+			// 	context.stroke()
+			// }
 
 
 	}
@@ -78,10 +92,10 @@ class ParticleTrail {
 }
 
 function Update () {
-	addEventListener("resize", (e) => {
-		canvas.width = window.innerWidth
-		canvas.height = window.innerHeight
-	})
+	// addEventListener("resize", (e) => {
+	// 	canvas.width = window.innerWidth
+	// 	canvas.height = window.innerHeight
+	// })
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	
 	particles.forEach(p => {
@@ -102,10 +116,10 @@ const n = 3
 const size = 1
 const color = 'white'
 const theta = 0.01
-const sigma = 40
-const dt = 5
-const length = 70
-const fps = 45
+const sigma = 30
+const dt = 3
+const length = 100
+const fps = 24
 
 /////////////////////
 
