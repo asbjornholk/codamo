@@ -1,6 +1,6 @@
 body {
 	background-color: var(--background-dark);
-	height: 300vh;
+	/* height: 300vh; */
 	overflow-x: hidden;
 }
 
@@ -235,6 +235,11 @@ body {
 	margin-bottom: auto;
 }
 
+.event-content .timetable-container {
+	margin-top: 0;
+	background-color: var(--accent-dark);
+}
+
 .event-content table {
 	width: 100%;
 	border-collapse: collapse;
@@ -291,6 +296,23 @@ body {
 
 .event-content .modal-content p {
 	line-height: 1.7;
+}
+
+/* Footer */
+
+.footer {
+	display: flex;
+	height: 250px;
+	background: linear-gradient(var(--background-dark), var(--background-footer) 50%);
+}
+
+.footer p {
+	margin: 180px auto;
+	color: var(--text-footer);
+}
+
+.footer a {
+	color: var(--text-footer)
 }
 
 /* Animations */
