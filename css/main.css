@@ -6,12 +6,17 @@ body {
 
 /* Splash screen */
 
-#particles {
+.splash {
+	background: linear-gradient(180deg, var(--background-light) 0%, var(--background-light) 84%, var(--background-dark) 100%);
+	height: max(120vh, 1000px)
+}
+
+.blur {
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: 20vh;
-	margin: auto;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	backdrop-filter: blur(5px);
 }
 
 .nav-buttons {
@@ -31,26 +36,27 @@ body {
 	margin: auto;
 }
 
-.splash {
-	position: relative;
-	background: linear-gradient(180deg, var(--background-light) 0%, var(--background-light) 84%, var(--background-dark) 100%);
-	height: max(120vh, 1000px)
-}
-
-.blur {
+#particles, .main-title {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 3;
-	backdrop-filter: blur(5px);
+	display: block;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 90%;
 }
 
-.splash-content {
-	margin-left: auto;
-	margin-right: auto;
+.team-buttons {
+	position: absolute;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	width: min(80%, 1200px);
+	width: min(80%, 1000px);
+	margin-top: 80vh;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .members { /* Buttons */
@@ -58,13 +64,14 @@ body {
 	align-self: center;
 	background-color: var(--accent-dark);
 	border: none;
-	margin-top: 15rem;
 	color: var(--text-main);
 	transition: background 100ms ease-out;
 	font-size: 13pt;
 	font-weight: 300;
 	border-radius: 15px;
-	padding: 30px 50px;
+	width: min(22vw, 250px);
+	height: min(10vh, 150px);
+	padding: 10px;
 	text-align: center;
 }
 
@@ -74,16 +81,7 @@ body {
 	background-color: var(--accent-bright);
 }
 
-.main-title {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-	grid-column: 1/-1;
-	margin-top: 40vh;
-	opacity: 1;
-	width: 100%;
-}
+
 
 /* Team modals */
 
@@ -168,17 +166,13 @@ body {
 }
 
 .content h2 {
-	font-size: 38pt;
+	font-size: 30pt;
 	font-weight: 900;
 }
 
 .content p {
 	line-height: 1.4;
 	padding-bottom: 6pt;
-}
-
-.content .about p {
-	column-count: 2;
 }
 
 /* Events */
@@ -194,6 +188,11 @@ body {
 	transition: background-color 100ms ease-out, border-radius 100ms 350ms;
 	font-size: 16pt;
 	font-weight: 300;
+}
+
+.schedule-button {
+	font-size: 14pt;
+	margin: 10px 0;
 }
 
 .event-button:hover,
@@ -223,15 +222,17 @@ body {
 	gap: 10px;
 }
 
-.event-content .event-header p {
-	column-count: 1;
+.event-content .event-header img {
+	object-fit: cover;
+	width: min(40%, 500px);
+	max-height: 100%;
+	border-radius: 20px 0 20px 0;
 }
 
-.event-content .event-header > img {
-	object-fit: cover;
-	width: min(100%, 500px);
-	max-height: 100%;
-	border-radius: 20px;
+.event-content .event-header .event-info {
+	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .event-content table {
@@ -328,3 +329,56 @@ body {
 		transform: translateY(0);
 	}
 }
+
+@media (min-width: 700px) {
+
+	.content .about p {
+		column-count: 2;
+	}
+
+	.content h2 {
+		font-size: 38pt;
+	}
+}
+
+@media (max-width: 700px) {
+	th {
+		display: none;
+	}
+
+	td {
+		display: block;
+		padding: 1rem;
+	}
+
+	td:first-child {
+		padding-top: 1rem;
+	}
+
+	td:last-child {
+		padding-bottom: max(3rem, fit-content);
+	}
+
+	td::before {
+		font-weight: bold;
+	}
+
+	td:nth-of-type(1)::before {
+		content: 'Time: ';
+	}
+
+	td:nth-of-type(2)::before {
+		content: 'Speaker: ';
+	}
+
+	td:nth-of-type(3)::before {
+		content: 'Title: ';
+	}
+}
+
+/* @media only screen and (min-width: 1920px) {
+
+	.content .about p {
+		column-count: 3;
+	}
+} */
