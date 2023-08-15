@@ -7,7 +7,12 @@
 	--accent-bright: #50485c;
 	--accent-dark: #36333b;
 	--splash: #a82929;
-	--profile-background: #efefef
+	--background-footer: #0b090c;
+	--text-footer: #504557a9;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 * {
