@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - ${{ secrets.MAIN_BRANCH }}
   workflow_dispatch:
   
 jobs:
