@@ -2,8 +2,6 @@ const { parsePhoneNumber } = require('libphonenumber-js')
 const { EleventyRenderPlugin } = require("@11ty/eleventy")
 const { DateTime } = require("luxon")
 
-// Test for break
-
 formatEvent = function(event, event_id) {
 	const firstIndex = /<h3>/.exec(event).index
 	const reSchedules = /<h3>(.*?)<\/h3>/g
