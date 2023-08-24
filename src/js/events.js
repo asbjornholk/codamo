@@ -3,9 +3,11 @@ toggleEvent = function(button, event_id) {
 
 	if (event.style.maxHeight) {
 		event.style.maxHeight = null
+		event.style.padding = "0px 20px 0px 20px"
 		button.removeAttribute('open')
 	} else {
 		button.setAttribute('open', true)
+		event.style.padding = "0px 20px 20px 20px"
 		event.style.maxHeight = event.scrollHeight + "px"
 	}
 }
