@@ -1,0 +1,90 @@
+---
+title: CODAMO
+layout: base.njk
+---
+
+<div class="splash">
+	<canvas id="particles" width="750" height="600">
+		<script src="js/particles.js"></script>
+	</canvas>	
+	<div class="blur">
+		<div class="nav-buttons">
+			<a href="#about">about</a>
+			<a href="#upcoming-events">events</a>
+			<!-- <a href="#previous-events">past events</a> -->
+		</div>
+		<img src="assets/main_title_centered.png" alt="Main title" class="main-title">
+		<div class="team-buttons">
+			<button class="members" onclick="openModal('aarhus')">Aarhus Team</button>
+			<button class="members" onclick="openModal('kiel')">Kiel Team</button>
+			<button class="members" onclick="openModal('oxford')">Oxford Team</button>	
+		</div>
+	</div>
+</div>
+
+
+<div class="content">
+
+	<div id="about" class="about">
+		{% renderFile './src/_includes/about.md' %}
+	</div>
+
+	<div class="events upcoming-events" id="upcoming-events">
+		<h2>Upcoming Events</h2>
+		{% if not collections.upcoming | length %}
+			<p>
+				There currently aren't any upcoming events.
+				Check back again soon!
+			</p>
+		{% endif %}
+
+		{%- for event in collections.upcoming -%}
+			<button class="event-button" onclick="toggleEvent(this, '{{ event.data.id }}')">
+				{{ event.data.title }}
+			</button>
+			<div class="event-content" id="{{ event.data.id }}">
+				{{ event.content | safe }}
+			</div>
+		{%- endfor -%}
+	</div>
+
+	<div class="events past-events" id="past-events">
+		<h2>Past events</h2>
+		{%- for event in collections.past -%}
+			<button class="event-button" onclick="toggleEvent(this, '{{ event.data.id }}')">
+				{% if event | isOneDay %}
+					{{ event.data.start | formatDate }}
+				{% else %}
+					{{ event.data.start | formatDate }} - {{ event.data.end | formatDate }}
+				{% endif %}
+				<span style="float:right">
+					{{ event.data.title }}
+				</span>
+			</button>
+			<div class="event-content" id="{{ event.data.id }}">
+				{{ event | formatEvent | safe }}
+			</div>
+		{%- endfor -%}
+	</div>
+</div>
+
+<dialog class="modal" id="aarhus">
+	<div class="modal-content">
+		{%- for card in collections.aarhus -%}
+			<div class="card">
+				<div class="info">
+					<img src="{{ card.data.image }}" alt="{{ card.data.alt }}" class="profile-picture">
+					<h2 class="name">{{ card.data.name }}</h2>
+					<p class="title">{{ card.data.title }}</p>
+					<p class="contact-info"><a href="mailto:{{ card.data.email }}">{{ card.data.email }}</a></p>
+					{% if card | hasPhoneNumber %}
+						<p class="contact-info"><a href="tel:{{ card.data.tel }}">{{ card.data.tel | formatPhone }}</a></p>
+					{% endif %}
+				</div>
+				<div class="description">
+					<p class="about">{{ card.content | safe }}</p>
+				</div>
+			</div>
+		{%- endfor -%}
+	</div>
+</dialog>

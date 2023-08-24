@@ -1,0 +1,116 @@
+
+<!--Team modals-->
+<dialog id="aarhus" class="modal">
+	<div class="modal-content">
+		<div class="card">
+			<div class="info">
+				<img src="img/andreas.jpeg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Andreas Basse-O'Connor</h2>
+				<p class="title">Professor</p>
+				<p class="contact-info"></span><a href="mailto:basse@math.au.dk">basse@math.au.dk</a></p>
+				<p class="contact-info"></span><a href="tel:+4587155752">+45 87 15 57 52</a></p>	
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/claudia.jpeg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Claudia Strauch</h2>
+				<p class="title">Associate Professor</p>
+				<p class="contact-info"></span><a href="mailto:strauch@math.au.dk">strauch@math.au.dk</a></p>
+				<p class="contact-info"></span><a href="tel:+4587155674">+45 87 15 56 74</a></p>	
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/asbjoern.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Asbjørn Holk Thomsen</h2>
+				<p class="title">PhD Student</p>
+				<p class="contact-info"><a href="mailto:a.holk@math.au.dk">a.holk@math.au.dk</a></p>
+				<p class="contact-info"><a href="tel:+4530268054">+45 30 26 80 54</a></p>	
+			</div>
+			<div class="description">
+				<p class="about">Asbjørn started his PhD-studies at Aarhus University in April 2022 under the supervision of Claudia Strauch. His field of research concerns mainly stochastic processes, in particular diffusion processes, and optimal stochastic control.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/tobias.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Tobias Toft Overgaard</h2>
+				<p class="title">PhD Student</p>
+				<p class="contact-info"></span><a href="mailto:tto@math.au.dk">tto@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+	
+		<div class="card">
+			<div class="info">
+				<img src="img/mette.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Mette Marie Skjøtt Rasmussen</h2>
+				<p class="title">PhD Student</p>
+				<p class="contact-info"></span><a href="mailto:metteskjott@math.au.dk">metteskjott@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/niklas.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Niklas Dexheimer</h2>
+				<p class="title">Postdoc</p>
+				<p class="contact-info"><span class="gg-mail"></span><a href="mailto:dexheimer@math.au.dk">dexheimer@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+	
+		<div class="card">
+			<div class="info">
+				<img src="img/lukas.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Lukas Trottner</h2>
+				<p class="title">Postdoc</p>
+				<p class="contact-info"><a href="mailto:trottner@math.au.dk">trottner@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/blank.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Anton Tiepner</h2>
+				<p class="title">PhD Student</p>
+				<p class="contact-info"><a href="mailto:tiepner@math.au.dk">tiepner@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="info">
+				<img src="img/blank.jpg" alt="profile picture" class="profile-picture">
+				<h2 class="name">Lota Copic</h2>
+				<p class="title">PhD Student</p>
+				<p class="contact-info"><a href="mailto:loco@math.au.dk">loco@math.au.dk</a></p>
+			</div>
+			<div class="description">
+				<p class="about">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus dolore numquam rerum neque suscipit minima natus. Eos, sed quaerat.</p>
+			</div>
+		</div>
+	</div>
+</dialog>
