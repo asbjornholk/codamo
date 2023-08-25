@@ -4,15 +4,12 @@ id: sandbjerg
 start: 2023-05-30
 end: 2023-06-01
 ---
-
-# Workshop on Random Models
-
-## Practical details
+# Practical details
 - Location: Sandbjerg Estate
 - Date and Time: May 28th 15.00 - May 30th 15.00
 - Address: Sandbjergvej 102, 6400 Sønderborg
 
-## Description
+# Description
 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 Error, fugit.
 Nostrum eos voluptatum iusto repellendus vero fuga rem libero! Corporis porro optio veniam molestiae tempora, ullam cum dolorem eligendi ipsum voluptatibus dolor nisi saepe debitis neque blanditiis laudantium.

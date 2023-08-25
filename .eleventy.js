@@ -62,9 +62,9 @@ formatRow = function(row, ncol) {
 
 	rowOut += '<td>' + rowContent[0] + '</td>\n<td>' + rowContent[1] + '</td>\n'
 	
-	if ( ncol == 3 || !rowContent[2] ) {
+	if ( ncol == 3 ) {
 		rowOut += '<td>' + rowContent[2] + '</td>\n'
-	} else {
+	} else if ( ncol == 4 ) {
 		var id = (Math.random() + 1).toString(36).substring(2)
 		rowOut += `<td><button onclick="openModal('` + id + `')">` + rowContent[2] + '</button></td>\n'
 		rowOut += '<dialog class="modal" id="' + id + '">\n<div class="modal-content">\n<h3>' + rowContent[2] + '</h3>\n<p>' + rowContent[3] + '</p>\n</div>\n</dialog>\n'

@@ -4,15 +4,12 @@ id: midsummer2023
 start: 2023-06-23
 end: 2023-06-23
 ---
-
-# The Midsummer Lectures 2023
-
-## Practical details
+# Practical details
 - Location: Aarhus University, Aud. G2
 - Date and Time: June 23rd 12.00-17.00
 - Address: Ny Munkegade 118, 8000 Aarhus C
 
-## Description
+# Description
 We celebrate Sankt Hans Aften with a series of lectures by internationally outstanding researchers, focusing on current developments and challenges in the field of mathematical statistics. There will also be food, drink, and plenty of time and space for discussion.
 
 ### Schedule

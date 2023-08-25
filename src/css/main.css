@@ -68,10 +68,10 @@ body {
 	transition: background 100ms ease-out;
 	font-size: 13pt;
 	font-weight: 300;
-	border-radius: 15px;
+	/* border-radius: 15px; */
 	width: min(22vw, 250px);
 	height: min(10vh, 150px);
-	padding: 10px;
+	/* padding: 10px; */
 	text-align: center;
 }
 
@@ -209,8 +209,13 @@ body {
 	font-size: 20pt;
 }
 
-.event-content h2 {
-	font-size: 100pt;
+.event-content ul {
+	margin-top: 0.5em;
+}
+
+.event-content li {
+	margin-bottom: 1em;
+	margin-left: 2em;
 }
 
 .schedule-button {

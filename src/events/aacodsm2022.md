@@ -4,15 +4,12 @@ id: aacodsm2022
 start: 2022-12-15
 end: 2022-12-15
 ---
-
-# Aarhus-Copenhagen Data Science Meeting 2022
-
-## Practical details
+# Practical details
 - Location: Aarhus University Aud. G2
 - Date and Time: December 15th 9.15-17.00
 - Address: Ny Munkegade 118, 8000 Aarhus C
 
-## Description
+# Description
 This meeting will bring together senior and early career data science researchers from Aarhus University and University of Copenahgen. Both groups are internationally renowned for their strong research profile in data science, each having their own focus areas. The core of the workshop are scientific presentations and informal discussions with the aim of fostering exchange between both groups.
 
 ### Schedule
