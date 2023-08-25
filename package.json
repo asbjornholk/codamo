@@ -15,5 +15,8 @@
     "libphonenumber-js": "^1.10.41",
     "markdown-it": "^13.0.1",
     "markdown-it-front-matter": "^0.2.3"
+  },
+  "dependencies": {
+    "flickity": "^3.0.0"
   }
 }

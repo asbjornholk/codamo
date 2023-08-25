@@ -69,22 +69,56 @@ layout: base.njk
 </div>
 
 <dialog class="modal" id="aarhus">
-	<div class="modal-content">
+	<div class="modal-header">
+		<h1>Aarhus Team</h1>
+		<button onclick="closeModal('aarhus')"><i class="fa-solid fa-xmark"></i></button>
+	</div>
+	<div class="modal-content carousel" id="carousel-aarhus">
 		{%- for card in collections.aarhus -%}
-			<div class="card">
+			<div class="card carousel-cell">
 				<div class="info">
 					<img src="{{ card.data.image }}" alt="{{ card.data.alt }}" class="profile-picture">
 					<h2 class="name">{{ card.data.name }}</h2>
 					<p class="title">{{ card.data.title }}</p>
-					<p class="contact-info"><a href="mailto:{{ card.data.email }}">{{ card.data.email }}</a></p>
-					{% if card | hasPhoneNumber %}
-						<p class="contact-info"><a href="tel:{{ card.data.tel }}">{{ card.data.tel | formatPhone }}</a></p>
-					{% endif %}
 				</div>
+				<hr/>
 				<div class="description">
-					<p class="about">{{ card.content | safe }}</p>
+					{{ card.content | safe }}
+				</div>
+				<div class="contact-info">
+					{% for key, value in card.data.info %}
+						<a href="{{ key | getLinkPrefix }}{{ value }}"><i class="{{ key | getFontAwesome }}"></i></a>
+					{% endfor %}
 				</div>
 			</div>
 		{%- endfor -%}
 	</div>
+</dialog>
+
+<dialog class="modal" id="kiel">
+	<div class="modal-header">
+		<h1>Kiel Team</h1>
+		<button onclick="closeModal('kiel')"><i class="fa-solid fa-xmark"></i></button>
+	</div>
+	<div class="modal-content carousel">
+		{%- for card in collections.aarhus -%}
+			<div class="card carousel-cell">
+				<div class="info">
+					<img src="{{ card.data.image }}" alt="{{ card.data.alt }}" class="profile-picture">
+					<h2 class="name">{{ card.data.name }}</h2>
+					<p class="title">{{ card.data.title }}</p>
+				</div>
+				<hr/>
+				<div class="description">
+					{{ card.content | safe }}
+				</div>
+				<div class="contact-info">
+					{% for key, value in card.data.info %}
+						<a href="{{ key | getLinkPrefix }}{{ value }}"><i class="{{ key | getFontAwesome }}"></i></a>
+					{% endfor %}
+				</div>
+			</div>
+		{%- endfor -%}
+	</div>
+	<script src="/js/cards.js"></script>
 </dialog>

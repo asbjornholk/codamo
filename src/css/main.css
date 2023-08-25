@@ -89,16 +89,10 @@ body {
 	display: none;
 	backdrop-filter: blur(5px);
 	background-color: #121016e0;
-	margin: min(50px, 5%) auto;
+	margin: min(10em, 20%) auto;
 	width: min(90%, 1300px);
 	border-style: none;
-	border-radius: 5px;
 	overflow-x: hidden;
-}
-
-.modal-content {
-	width: 100%;
-	height: 100%;
 }
 
 .modal[open] {
@@ -113,29 +107,58 @@ body {
 	animation: fade-out 100ms ease-out forwards;
 }
 
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: var(--accent-bright);
+	padding: 1rem;
+}
+
+.modal-header button {
+	border: none;
+	background-color: var(--accent-bright);
+	color: var(--text-main);
+	text-align: left;
+	padding: 0 5pt;
+	font-size: 24pt;
+}
+
+.modal-header button:hover {
+	cursor: pointer;
+}
+
+.modal-header h1 {
+	color: var(--text-main);
+}
+
 /* Profile cards */
 
-.modal-content {
+.carousel {
+	margin: 2em;
+}
+
+/* .modal-content {
 	display: grid;
 	gap: 10px;
 	margin: 10px 10px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+} */
+
+.carousel-cell {
+	margin: 0 1em;
 }
 
 .card {
 	padding: 20px;
 	background-color: var(--background-light);
 	width: 300px;
-	margin: 0 auto;
-	border-radius: 30px;
+	height: 550px;
+	/* border-radius: 30px; */
 }
 
-.description {
-	margin: 20px 0;
-	background-color: var(--background-dark);
+.info {
 	color: var(--text-main);
-	padding: 20px 10px;
-	border-radius: 10px;
 }
 
 .profile-picture {
@@ -145,17 +168,39 @@ body {
 	border-radius: 50%;
 }
 
-.info {
-	color: var(--text-main);
-}
-
-.info a {
-	color: var(--text-main);
-}
-
 .name {
+	margin-top: 1em;
 	font-weight: 300;
-	font-size: 28pt;
+	font-size: 18pt;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	margin: 0.5em;
+}
+
+.description {
+	color: var(--text-main);
+}
+
+.contact-info {
+	bottom: 1em;
+	display: grid;
+	grid-auto-flow: column;
+	text-align: center;
+	justify-content: center;
+	margin: 1em 0;
+}
+
+.contact-info a {
+	color: var(--text-main);
+	margin: 0 1em;
+	padding: 0.5em;
+}
+
+.contact-info i {
+	font-size: 16pt;
 }
 
 /* Main content */

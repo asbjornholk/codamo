@@ -116,7 +116,27 @@ module.exports = function(eleventyConfig) {
 	})
 
 	eleventyConfig.addFilter('hasPhoneNumber', function(card) {
-		return !(card.data.tel === null)
+		return !(card.data.info.tel === null)
+	})
+
+	eleventyConfig.addFilter('getLinkPrefix', function(key) {
+		const dict = {
+			"tel": "tel:",
+			"email": "mailto:"
+		}
+
+		return dict[key]
+	})
+
+	eleventyConfig.addFilter('getFontAwesome', function(key) {
+		const dict = {
+			"tel": "fa-solid fa-phone",
+			"email": "fa-solid fa-envelope",
+			"github": "fa-brands fa-github",
+			"linkedin": "fa-brands fa-linkedin"
+		}
+		
+		return dict[key]
 	})
 
 	return {

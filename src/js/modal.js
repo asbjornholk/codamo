@@ -1,6 +1,9 @@
 openModal = function(modal_id) {
 	var modal = document.getElementById(modal_id)
 	modal.showModal()
+	for (const flickity of flickities) {
+		flickity.resize()
+	}
 }
 
 closeModal = function(modal_id) {
